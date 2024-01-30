@@ -1,0 +1,26 @@
+// login.scss
+
+// Import Bootstrap Sass
+@import 'bootstrap/scss/bootstrap';
+
+// Customize the login page styling
+body.user-logged-out {
+  background-color: #e0f7fa; // Light blue background color
+}
+
+.user-login-form {
+  background-color: #ffffff; // White background for the login form
+  border: 1px solid #2196F3; // Dark blue border color
+  padding: 20px; // Adjust padding as needed
+  max-width: 400px; // Adjust maximum width as needed
+  margin: 0 auto; // Center the form
+}
+
+// Customize the login form button
+.user-login-form input.form-submit {
+  background-color: #2196F3; // Dark blue background color
+  color: #ffffff; // White text color
+  border: 1px solid #2196F3; // Dark blue border color
+  padding: 10px 20px; // Adjust padding as needed
+  cursor: pointer;
+}

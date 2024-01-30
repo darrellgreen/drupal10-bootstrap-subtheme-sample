@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override to control the HTML structure of the final output.
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ head_title|safe_join(' | ') }}</title>
+  {{ head|raw }}
+  <link rel="stylesheet" href="{{ base_path ~ directory }}/css/custom-bootstrap-subtheme.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dGL0f1XVZQ8TnL95Bx2kD5Pa3Fpke0b0ek5Iq3SBmbv8JwS7lFvR2G0Fq1RABsck" crossorigin="anonymous">
+  {{ styles }}
+  {{ javascript_settings }}
+  {{ page_top }}
+  {{ page_bottom }}
+</head>
+<body{{ attributes.addClass(body_classes) }}>
+  {{ page }}
+  {{ page_bottom }}
+</body>
+</html>

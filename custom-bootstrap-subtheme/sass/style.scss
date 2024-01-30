@@ -1,0 +1,26 @@
+// custom-bootstrap-subtheme.scss
+
+// Import Bootstrap Sass
+@import 'bootstrap/scss/bootstrap';
+
+// Your custom styles start here
+
+// Reset some Bootstrap default styles if needed
+body {
+    background-color: #f8f9fa; // Light gray background color
+    color: #333; // Dark text color
+}
+
+// Navbar styles
+.navbar {
+    background-color: #e0f7fa; // Light blue navbar background color
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #2196F3; // Dark blue color for the navbar toggle icon
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: #2196F3; // Dark blue border color for the navbar toggle button
+}
+

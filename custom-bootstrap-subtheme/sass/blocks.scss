@@ -1,0 +1,12 @@
+// blocks.scss
+
+// Import Bootstrap Sass
+@import 'bootstrap/scss/bootstrap';
+
+// Override block styling
+.block {
+  background-color: #e0f7fa; // Light blue background color
+  border: 1px solid #2196F3; // Dark blue border color
+  padding: 15px; // Adjust padding as needed
+  margin-bottom: 20px; // Adjust margin as needed
+}

@@ -1,0 +1,44 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function custom_bootstrap_subtheme_preprocess_menu(&$variables) {
+  // Add a custom class to menu templates.
+  $variables['attributes']['class'][] = 'navbar-nav';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu item templates.
+ */
+function custom_bootstrap_subtheme_preprocess_menu_item(&$variables) {
+  // Add a custom class to each menu item.
+  $variables['attributes']['class'][] = 'nav-item';
+
+  // Check if the menu item has children (submenu).
+  if ($variables['menu_item']->hasChildren) {
+    // Add Bootstrap classes for dropdowns.
+    $variables['attributes']['class'][] = 'dropdown';
+    $variables['sub_menu'] = '<ul class="dropdown-menu">' . $variables['tree'] . '</ul>';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu link templates.
+ */
+function custom_bootstrap_subtheme_preprocess_menu_link(&$variables) {
+  // Add Bootstrap class for dropdown menu items.
+  if ($variables['element']['#below']) {
+    $variables['element']['#attributes']['class'][] = 'dropdown-toggle';
+    $variables['element']['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+  }
+}
+
+/**
+ * Theme function for rendering a menu with Bootstrap dropdowns.
+ */
+function custom_bootstrap_subtheme_menu_tree($variables) {
+  return '<ul class="nav">' . $variables['tree'] . '</ul>';
+}

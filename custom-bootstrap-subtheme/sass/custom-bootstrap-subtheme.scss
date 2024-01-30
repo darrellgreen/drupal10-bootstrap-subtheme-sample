@@ -1,0 +1,12 @@
+// custom-bootstrap-subtheme.scss
+
+// Import Bootstrap Sass
+@import 'bootstrap/scss/bootstrap';
+
+// Import your separate Sass files
+@import 'style';
+@import 'blocks';
+@import 'login';
+
+// Import Font Awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');

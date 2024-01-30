@@ -1,0 +1,6 @@
+name: 'Custom Bootstrap Subtheme'
+type: theme
+description: 'A custom subtheme based on Bootstrap'
+core_version_requirement: ^8 || ^9
+base theme: bootstrap
+package: Custom

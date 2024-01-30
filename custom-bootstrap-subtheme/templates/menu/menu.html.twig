@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override to display a navigation menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu item title.
+ *   - url: The menu item URL.
+ *   - localized_options: Menu item localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     page tree.
+ *   - is_collapsed: TRUE if the link has visible children within the current
+ *     page tree, but is not expanded.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ * - attributes: HTML attributes for the containing element.
+ * - heading: The menu heading.
+ */
+#}
+
+{% import _self as menus %}
+
+{%
+  set classes = [
+    'navbar-nav',
+    'mr-auto',
+    'ml-0',
+    'ml-md-auto',
+  ]
+%}
+
+{%
+  set menu_classes = [
+    'menu',
+    'nav',
+    'navbar-nav',
+    'ml-auto',
+  ]
+%}
+
+{%
+  set list_classes = [
+    'nav',
+    'navbar-nav',
+    'ml-auto',
+  ]
+%}
+
+<nav {{ menu_attributes.addClass(menu_classes) }}>
+  {{ menus.menu_links(items, attributes.addClass(classes).addClass('nav-item')) }}
+</nav>
